@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Base.Ver"
+             BackgroundColor="DimGray">
+    
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <Label Text="Resultados Almacenados" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="30" FontAttributes="Bold" TextColor="White"/>
+            <ScrollView>
+                <ListView x:Name="listView" IsEnabled="False" SeparatorColor="White" />
+            </ScrollView>
+            <Button x:Name="btnLimpiar" Text="Limpiar"></Button>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Base.Agenda">
+    <ContentPage.Content>
+    <StackLayout>
+      <Label
+        Text="¿Que desea guardar?"/>
+      <Entry
+        x:Name="entryLinea"/>
+      <Picker
+        x:Name="picker">
+        <Picker.Items>
+          <x:String>1</x:String>
+          <x:String>2</x:String>
+          <x:String>3</x:String>
+          <x:String>4</x:String>
+          <x:String>5</x:String>
+        </Picker.Items>
+      </Picker>
+      <Button
+        x:Name="btnGuardar"
+        Clicked="btnGuardar_Clicked"
+        Text="Guardar"/>
+      <Button
+        x:Name="btnLeer"
+        Clicked="btnLeer_Clicked"
+        Text="Leer"/>
+      <Button
+        x:Name="btnLimpiar"
+        Clicked="btnLimpiar_Clicked"
+        Text="Limpiar"/>
+
+      <Label x:Name="StatusMessage" FontSize="Medium" />
+      <ListView x:Name="userList">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <Grid>
+                <Label Text="{Binding Id}" />
+                <Label Grid.Column="1" Text="{Binding Linea}" />
+                <Label Grid.Column="2" Text="{Binding Importantia}" TextColor="Black" />
+                <Button
+                  Clicked="Button_Clicked"
+                  Grid.Column="3"
+                  Text="Borrar"/>
+              </Grid>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+    </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
